@@ -1,8 +1,9 @@
 import {IOnboardingEntities, IWordData, wordTypes} from "@/tempDB/types";
 import alphabets from '../assets/images/alphabets.png'
 import goToGoal from '../assets/images/goToGoal.png'
-import learn from '../assets/images/learn.png'
-import vocabularyLearn from '../assets/images/klipartz.png'
+import learn from '../assets/images/learn.webp'
+import vocabularyLearn from '../assets/images/klipartz.webp'
+import notification from '../assets/images/notification.png'
 import bg1 from '../assets/images/abstract.webp'
 import bg2 from '../assets/images/pexels.webp'
 import bg3 from '../assets/images/pexels-enginakyurt-1493226.webp'
@@ -200,8 +201,19 @@ export const onboardingData: IOnboardingEntities = {
             'Human body',
             'Emotions',
             'Business',
-            'Other',
+            'Other topic',
         ],
+    },
+    '100': {
+        id: 100,
+        title: 'Vocabulary works better with reminders',
+        description: 'Allow notifications to get daily words',
+        method: () => {},
+        methodTitle: "OK, let's do it",
+        skip: false,
+        image: notification,
+        pageKay: pageKey.notification,
+        questions: null,
     },
 }
 

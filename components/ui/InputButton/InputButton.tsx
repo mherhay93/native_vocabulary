@@ -20,11 +20,14 @@ const InputButton: FC<IPropsInputButton> = ({title, handelSelect, ...props}) => 
     }
 
     useEffect(() => {
-        return () => clearTimeout(timeoutId)
+        return () => {
+            clearTimeout(timeoutId)
+            setSelect(false)
+        }
     }, []);
 
     return (
-        <TouchableOpacity onPress={handlePress} style={styles.buttonContainer} {...props} >
+        <TouchableOpacity onPress={handlePress} style={[styles.buttonContainer, select && styles.selected]} {...props} >
             <ThemedText
                 darkColor={Colors.light.text}
                 lightColor={Colors.dark.text}
@@ -59,6 +62,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+    },
+    selected: {
+        backgroundColor: Colors.light.inputBG,
+        borderColor: Colors.light.borderedButtonBG,
     },
     text: {
         textAlign: 'left',

@@ -1,5 +1,5 @@
 import {createSlice, Draft, PayloadAction} from "@reduxjs/toolkit";
-import {IInitialState, IUserData} from "@/redux/user/types";
+import {IInitialState, IUI, IUserData} from "@/redux/user/types";
 
 const initialState: IInitialState = {
     userData: {
@@ -10,6 +10,9 @@ const initialState: IInitialState = {
         level: '',
         timeLearning: '',
     },
+    UI: {
+        prevPage: ''
+    }
 }
 
 const userSlice = createSlice({
@@ -18,6 +21,9 @@ const userSlice = createSlice({
     reducers: {
         setUserData(state: Draft<IInitialState>, action: PayloadAction<Partial<IUserData>>) {
             state.userData = {...state.userData, ...action.payload};
+        },
+        setUI(state: Draft<IInitialState>, action: PayloadAction<Partial<IUI>>) {
+            state.UI = {...state.UI, ...action.payload};
         },
     }
 })

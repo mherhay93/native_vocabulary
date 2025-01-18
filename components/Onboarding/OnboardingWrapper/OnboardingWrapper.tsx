@@ -12,7 +12,7 @@ const OnboardingWrapper: FC<IPropsOnboardingWrapper> = ({children}) => {
     }, 'background');
     return (
         <SafeAreaView style={{...styles.container, backgroundColor}}>
-            <StatusBar barStyle="light-content" backgroundColor="unset" translucent/>
+            <StatusBar barStyle="light-content" backgroundColor="transparent" translucent/>
             {children}
         </SafeAreaView>
     )

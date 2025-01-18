@@ -1,5 +1,6 @@
 export interface IInitialState {
-    userData: IUserData
+    userData: IUserData;
+    UI: IUI
 }
 
 export interface IUserData {
@@ -9,6 +10,10 @@ export interface IUserData {
     userName: string,
     level: string,
     timeLearning: string,
+}
+
+export interface IUI {
+    prevPage: string | number
 }
 
 export enum pageKey {
@@ -21,5 +26,6 @@ export enum pageKey {
     remindersTime = 'remindersTime',
     background = 'background',
     goal = 'goal',
-    topic = 'topic'
+    topic = 'topic',
+    notification ='notification',
 }
