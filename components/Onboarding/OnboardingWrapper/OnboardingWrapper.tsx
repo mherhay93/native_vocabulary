@@ -23,9 +23,9 @@ export default OnboardingWrapper;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: 20
+        padding: 20,
+        gap: 20
     }
 })

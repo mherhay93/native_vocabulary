@@ -10,7 +10,7 @@ import bg4 from '../assets/images/pexels-fwstudio-33348-129731.webp'
 import bg5 from '../assets/images/pexels-joaojesusdesign.webp'
 
 export const onboardingData: IOnboardingEntities = {
-    page1: {
+    '1': {
         title: 'Expand your Vocabulary in 1 minute a day',
         description: 'Learn 10,000+ new wards with a new daily habit that takes just 1 minute',
         method: () => {},
@@ -19,7 +19,7 @@ export const onboardingData: IOnboardingEntities = {
         skip: false,
         questions: null,
     },
-    page2: {
+    '2': {
         title: 'How did you hear about Vocabulary?',
         description: 'Select an option to continue',
         method: null,
@@ -35,7 +35,7 @@ export const onboardingData: IOnboardingEntities = {
             'Other',
         ],
     },
-    page3: {
+    '3': {
         title: 'Tailor your word recommendations',
         description: 'Answer a few questions to get personalized word suggestion',
         method: () => {},
@@ -44,7 +44,7 @@ export const onboardingData: IOnboardingEntities = {
         skip: false,
         questions: null,
     },
-    page4: {
+    '4': {
         title: 'How old are you?',
         description: 'Your age is used personalize your content',
         method: null,
@@ -59,7 +59,7 @@ export const onboardingData: IOnboardingEntities = {
             '55+',
         ],
     },
-    page5: {
+    '5': {
         title: 'Which option represents you best?',
         description: 'Select an option to continue',
         method: null,
@@ -72,15 +72,15 @@ export const onboardingData: IOnboardingEntities = {
             'Prefer not to say',
         ],
     },
-    page6: {
+    '6': {
         title: 'What do you want to be called?',
         description: 'Your name is used to personalize your experience',
         method: () => {},
-        methodTitle: '',
+        methodTitle: 'Continue',
         skip: true,
         questions: 'input',
     },
-    page7: {
+    '7': {
         title: 'What is your vocabulary level?',
         description: 'Select an option to continue',
         method: null,
@@ -92,7 +92,7 @@ export const onboardingData: IOnboardingEntities = {
             'Advanced',
         ],
     },
-    page8: {
+    '8': {
         title: "Let's make Vocabulary yours",
         description: 'Customize the app to make the most of your experience',
         method: () => {},
@@ -101,7 +101,7 @@ export const onboardingData: IOnboardingEntities = {
         skip: false,
         questions: null,
     },
-    page9: {
+    '9': {
         title: 'How much time will you devote to learning?',
         description: 'You can always change your goal later',
         method: null,
@@ -113,8 +113,8 @@ export const onboardingData: IOnboardingEntities = {
             '5 minute a day',
         ],
     },
-    // page10 other component
-    page11: {
+    // '10' other component
+    '11': {
         title: 'Which theme would you like to start with?',
         description: 'Choose from a larger selection of themes or create your own later',
         method: () => {},
@@ -129,7 +129,7 @@ export const onboardingData: IOnboardingEntities = {
             'bg6',
         ],
     },
-    page12: {
+    '12': {
         title: 'Set up Vocabulary to get personalized words',
         description: 'Some final questions to customize Vocabulary to what you want to achieve',
         method: () => {},
@@ -138,7 +138,7 @@ export const onboardingData: IOnboardingEntities = {
         skip: false,
         questions: null,
     },
-    page13: {
+    '13': {
         title: 'Do you have a specific goal in mind?',
         description: 'Select an option to continue',
         method: () => {},
@@ -152,7 +152,7 @@ export const onboardingData: IOnboardingEntities = {
             'Other',
         ],
     },
-    page14: {
+    '14': {
         title: 'Which topics are you interested in?',
         description: 'Select an option to continue',
         method: () => {},

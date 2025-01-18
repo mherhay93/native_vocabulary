@@ -1,6 +1,6 @@
 import {FC} from 'react';
 
-import {ThemedView} from "@/components/ThemedView";
+import {ThemedView} from "@/components/ui/ThemedView/ThemedView";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {IPropsHome} from './types';
 

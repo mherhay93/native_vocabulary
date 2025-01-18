@@ -9,7 +9,7 @@ const Root: FC<IPropsRoot> = () => {
     const onboarded = getDataStorage('onboarded')
 
     if (Boolean(onboarded)) {
-        return <Redirect href="/onboarding/page1" />;
+        return <Redirect href="/onboarding/1" />;
     }
 
     return <Home />;

@@ -5,10 +5,10 @@ import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {Colors} from "@/constants/Colors";
 import {IPropsBorderedButton} from './types';
 
-const BorderedButton: FC<IPropsBorderedButton> = ({title, ...props}) => {
+const BorderedButton: FC<IPropsBorderedButton> = ({title, customStyle, ...props}) => {
 
     return (
-        <TouchableOpacity style={[styles.buttonContainer]} {...props} >
+        <TouchableOpacity style={[styles.buttonContainer, customStyle]} {...props} >
             <ThemedText
                 darkColor={Colors.dark.borderedButtonText}
                 lightColor={Colors.light.borderedButtonText}
