@@ -1,16 +1,19 @@
 import {ImageSourcePropType} from "react-native";
+import {pageKey} from "@/redux/user/types";
 
 export interface IOnboardingEntities {
     [key: string]: IOnboardingData;
 }
 
 export interface IOnboardingData {
+    id: number;
     title: string;
     description: string;
     method: (() => void) | null;
     methodTitle: string;
     image?: ImageSourcePropType;
     skip: boolean;
+    pageKay: pageKey;
     questions: string[] | 'input' | null;
 }
 

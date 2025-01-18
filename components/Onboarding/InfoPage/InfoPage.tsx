@@ -1,18 +1,36 @@
 import {FC} from 'react';
 import {useRouter} from "expo-router";
 import {StyleSheet, TouchableOpacity, View} from "react-native";
+import {useDispatch} from "react-redux";
 
 import BorderedButton from "@/components/ui/BorderedButton/BorderedButton";
 import Questions from "@/components/Onboarding/Questions/Questions";
 import ThemedInput from "@/components/ui/ThemedInput/ThemedInput";
 import ThemedImage from "@/components/ui/ThemedImage/ThemedImage";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
+import {userReducers} from "@/redux/user/slice";
 import {Colors} from "@/constants/Colors";
 import {IPropsInfoPage} from './types';
 
+const {
+    setUserData
+} = userReducers
+
 const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
+    const dispatch = useDispatch()
     const router = useRouter();
-    const handleNavigate = () => router.push(`/onboarding/${Number(page) + 1}`)
+    const handleNavigate = () => router.push(`/onboarding/${Number(page) + 1}`);
+
+    const handelSelect = (value: string) => {
+        const key = pageData.pageKay
+        handleNavigate();
+        dispatch(setUserData({[key] : value}));
+    }
+
+    const handelChange = (value: string) => {
+        const key = pageData.pageKay
+        dispatch(setUserData({[key] : value}));
+    }
 
     return (
         <>
@@ -48,14 +66,14 @@ const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
             {pageData.questions && pageData.questions !== 'input' && (
                 <View style={styles.questions}>
                     <Questions
-                        handleNavigate={handleNavigate}
+                        handelSelect={handelSelect}
                         data={pageData.questions}
                     />
                 </View>
             )}
             {pageData.questions === 'input' && (
                 <View style={styles.input}>
-                    <ThemedInput/>
+                    <ThemedInput onChangeText={handelChange}/>
                 </View>
             )}
             {pageData.methodTitle && (

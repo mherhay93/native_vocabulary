@@ -8,23 +8,28 @@ import bg2 from '../assets/images/pexels.webp'
 import bg3 from '../assets/images/pexels-enginakyurt-1493226.webp'
 import bg4 from '../assets/images/pexels-fwstudio-33348-129731.webp'
 import bg5 from '../assets/images/pexels-joaojesusdesign.webp'
+import {pageKey} from "@/redux/user/types";
 
 export const onboardingData: IOnboardingEntities = {
     '1': {
+        id: 1,
         title: 'Expand your Vocabulary in 1 minute a day',
         description: 'Learn 10,000+ new wards with a new daily habit that takes just 1 minute',
         method: () => {},
         methodTitle: 'Get started',
         image: alphabets,
         skip: false,
+        pageKay: pageKey.whereHear,
         questions: null,
     },
     '2': {
+        id: 2,
         title: 'How did you hear about Vocabulary?',
         description: 'Select an option to continue',
         method: null,
         methodTitle: '',
         skip: true,
+        pageKay: pageKey.whereHear,
         questions: [
             'TikTok',
             'Instagram',
@@ -36,20 +41,24 @@ export const onboardingData: IOnboardingEntities = {
         ],
     },
     '3': {
+        id: 3,
         title: 'Tailor your word recommendations',
         description: 'Answer a few questions to get personalized word suggestion',
         method: () => {},
         methodTitle: 'Continue',
         image: goToGoal,
         skip: false,
+        pageKay: pageKey.ageRange,
         questions: null,
     },
     '4': {
+        id: 4,
         title: 'How old are you?',
         description: 'Your age is used personalize your content',
         method: null,
         methodTitle: '',
         skip: true,
+        pageKay: pageKey.ageRange,
         questions: [
             '13 to 17',
             '18 to 24',
@@ -60,11 +69,13 @@ export const onboardingData: IOnboardingEntities = {
         ],
     },
     '5': {
+        id: 5,
         title: 'Which option represents you best?',
         description: 'Select an option to continue',
         method: null,
         methodTitle: '',
         skip: true,
+        pageKay: pageKey.gender,
         questions: [
             'Female',
             'Male',
@@ -73,19 +84,23 @@ export const onboardingData: IOnboardingEntities = {
         ],
     },
     '6': {
+        id: 6,
         title: 'What do you want to be called?',
         description: 'Your name is used to personalize your experience',
         method: () => {},
         methodTitle: 'Continue',
         skip: true,
+        pageKay: pageKey.userName,
         questions: 'input',
     },
     '7': {
+        id: 7,
         title: 'What is your vocabulary level?',
         description: 'Select an option to continue',
         method: null,
         methodTitle: '',
         skip: false,
+        pageKay: pageKey.level,
         questions: [
             'Beginner',
             'Intermediate',
@@ -93,33 +108,48 @@ export const onboardingData: IOnboardingEntities = {
         ],
     },
     '8': {
+        id: 8,
         title: "Let's make Vocabulary yours",
         description: 'Customize the app to make the most of your experience',
         method: () => {},
         methodTitle: 'Continue',
         image: learn,
         skip: false,
+        pageKay: pageKey.timeLearning,
         questions: null,
     },
     '9': {
+        id: 9,
         title: 'How much time will you devote to learning?',
         description: 'You can always change your goal later',
         method: null,
         methodTitle: '',
         skip: false,
+        pageKay: pageKey.timeLearning,
         questions: [
             '1 minute a day',
             '3 minute a day',
             '5 minute a day',
         ],
     },
-    // '10' other component
+    '10': {
+        id: 10,
+        title: 'Learn Words with daily reminders',
+        description: 'Allow notifications to get daily words',
+        method: null,
+        methodTitle: 'Allow and Save',
+        skip: false,
+        pageKay: pageKey.remindersTime,
+        questions: null,
+    },
     '11': {
+        id: 11,
         title: 'Which theme would you like to start with?',
         description: 'Choose from a larger selection of themes or create your own later',
         method: () => {},
         methodTitle: 'Continue',
         skip: false,
+        pageKay: pageKey.background,
         questions: [
             bg1,
             bg2,
@@ -130,20 +160,24 @@ export const onboardingData: IOnboardingEntities = {
         ],
     },
     '12': {
+        id: 12,
         title: 'Set up Vocabulary to get personalized words',
         description: 'Some final questions to customize Vocabulary to what you want to achieve',
         method: () => {},
         methodTitle: 'Continue',
         image: vocabularyLearn,
         skip: false,
+        pageKay: pageKey.goal,
         questions: null,
     },
     '13': {
+        id: 13,
         title: 'Do you have a specific goal in mind?',
         description: 'Select an option to continue',
         method: () => {},
         methodTitle: 'Continue',
         skip: false,
+        pageKay: pageKey.goal,
         questions: [
             'Enhance my lexicon',
             'Get ready for a test',
@@ -153,11 +187,13 @@ export const onboardingData: IOnboardingEntities = {
         ],
     },
     '14': {
+        id: 14,
         title: 'Which topics are you interested in?',
         description: 'Select an option to continue',
         method: () => {},
         methodTitle: 'Continue',
         skip: false,
+        pageKay: pageKey.topic,
         questions: [
             'Society',
             'Words in foreign languages',

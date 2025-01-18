@@ -1,6 +1,5 @@
-import {CSSProperties} from "react";
-import {ButtonProps} from "react-native";
+import {ButtonProps, StyleProp, ViewStyle} from "react-native";
 
 export interface IPropsBorderedButton extends ButtonProps {
-    customStyle?: CSSProperties;
+    customStyle?: StyleProp<ViewStyle>;
 }

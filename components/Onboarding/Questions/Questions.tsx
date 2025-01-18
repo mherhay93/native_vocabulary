@@ -4,14 +4,14 @@ import {FlatList, StyleSheet, View} from "react-native";
 import InputButton from "@/components/ui/InputButton/InputButton";
 import {IPropsQuestions} from './types';
 
-const Questions: FC<IPropsQuestions> = ({data, handleNavigate}) => {
+const Questions: FC<IPropsQuestions> = ({data, handelSelect}) => {
 
     return (
         <FlatList
             data={data}
             renderItem={({item}) => (
                 <View style={styles.item}>
-                    <InputButton title={item} onPress={handleNavigate}/>
+                    <InputButton title={item} handelSelect={handelSelect}/>
                 </View>
             )}
             keyExtractor={item => item}

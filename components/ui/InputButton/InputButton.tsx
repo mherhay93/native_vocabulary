@@ -2,18 +2,18 @@ import {FC, useEffect, useState} from 'react';
 import {StyleSheet, TouchableOpacity} from "react-native";
 
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
-import {IconSymbol} from "@/components/ui/IconSymbol";
+import {IconSymbol} from "@/components/ui/IconSymbol/IconSymbol";
 import {Colors} from "@/constants/Colors";
 import {IPropsInputButton} from './types';
 
-const InputButton: FC<IPropsInputButton> = ({title, onPress, ...props}) => {
-    const [select, setSelect] = useState()
-    let timeoutId;
+const InputButton: FC<IPropsInputButton> = ({title, handelSelect, ...props}) => {
+    const [select, setSelect] = useState(false)
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const handlePress = () => {
-        if (onPress) {
+        if (handelSelect) {
             timeoutId = setTimeout(() => {
-                onPress()
+                handelSelect(title)
             }, 400)
         }
         setSelect(!select)

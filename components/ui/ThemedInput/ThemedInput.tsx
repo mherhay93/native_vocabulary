@@ -16,7 +16,7 @@ export default ThemedInput;
 const styles = StyleSheet.create({
     input: {
         borderRadius: 8,
-        backgroundColor: 'rgba(136, 136, 136, 0.22)',
+        backgroundColor: Colors.dark.inputBG,
         color: Colors.dark.text
     }
 })

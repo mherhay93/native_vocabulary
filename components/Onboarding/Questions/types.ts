@@ -1,4 +1,4 @@
 export interface IPropsQuestions {
     data: string[];
-    handleNavigate: () => void;
+    handelSelect: (value: string) => void;
 }

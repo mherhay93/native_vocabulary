@@ -11,22 +11,26 @@ export const Colors = {
     text: '#11181C',
     background: '#fff',
     tint: tintColorLight,
-    icon: '#687076',
+    icon: '#ffffff',
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
     onboardingBG: '#2B2D30',
     borderedButtonBG: '#7cb1dd',
     borderedButtonText: '#000',
+    inputBG: 'rgba(136, 136, 136, 0.22)',
+    borderBG: 'rgb(103,103,103)'
   },
   dark: {
     text: '#ECEDEE',
     background: '#151718',
     tint: tintColorDark,
-    icon: '#9BA1A6',
+    icon: '#fbfbfb',
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
     onboardingBG: '#2B2D30',
     borderedButtonBG: '#7cb1dd',
     borderedButtonText: '#000',
+    inputBG: 'rgba(136, 136, 136, 0.22)',
+    borderBG: 'rgb(103,103,103)'
   },
 };
