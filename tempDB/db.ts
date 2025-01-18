@@ -1,5 +1,5 @@
 import {IOnboardingEntities, IWordData, wordTypes} from "@/tempDB/types";
-import alpabets from '../assets/images/alpabets.png'
+import alphabets from '../assets/images/alphabets.png'
 import goToGoal from '../assets/images/goToGoal.png'
 import learn from '../assets/images/learn.png'
 import vocabularyLearn from '../assets/images/klipartz.png'
@@ -15,7 +15,7 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Learn 10,000+ new wards with a new daily habit that takes just 1 minute',
         method: () => {},
         methodTitle: 'Get started',
-        image: alpabets,
+        image: alphabets,
         skip: false,
         questions: null,
     },
@@ -24,7 +24,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Select an option to continue',
         method: null,
         methodTitle: '',
-        image: '',
         skip: true,
         questions: [
             'TikTok',
@@ -50,7 +49,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Your age is used personalize your content',
         method: null,
         methodTitle: '',
-        image: '',
         skip: true,
         questions: [
             '13 to 17',
@@ -66,7 +64,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Select an option to continue',
         method: null,
         methodTitle: '',
-        image: '',
         skip: true,
         questions: [
             'Female',
@@ -80,7 +77,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Your name is used to personalize your experience',
         method: () => {},
         methodTitle: '',
-        image: '',
         skip: true,
         questions: 'input',
     },
@@ -89,7 +85,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Select an option to continue',
         method: null,
         methodTitle: '',
-        image: '',
         skip: false,
         questions: [
             'Beginner',
@@ -111,7 +106,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'You can always change your goal later',
         method: null,
         methodTitle: '',
-        image: '',
         skip: false,
         questions: [
             '1 minute a day',
@@ -125,7 +119,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Choose from a larger selection of themes or create your own later',
         method: () => {},
         methodTitle: 'Continue',
-        image: '',
         skip: false,
         questions: [
             bg1,
@@ -150,7 +143,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Select an option to continue',
         method: () => {},
         methodTitle: 'Continue',
-        image: '',
         skip: false,
         questions: [
             'Enhance my lexicon',
@@ -165,7 +157,6 @@ export const onboardingData: IOnboardingEntities = {
         description: 'Select an option to continue',
         method: () => {},
         methodTitle: 'Continue',
-        image: '',
         skip: false,
         questions: [
             'Society',

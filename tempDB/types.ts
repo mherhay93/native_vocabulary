@@ -1,3 +1,5 @@
+import {ImageSourcePropType} from "react-native";
+
 export interface IOnboardingEntities {
     [key: string]: IOnboardingData;
 }
@@ -7,7 +9,7 @@ export interface IOnboardingData {
     description: string;
     method: (() => void) | null;
     methodTitle: string;
-    image: string;
+    image?: ImageSourcePropType;
     skip: boolean;
     questions: string[] | 'input' | null;
 }
