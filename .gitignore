@@ -34,7 +34,6 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
-declarations.d.ts
 
 # editor file
 .idea/
