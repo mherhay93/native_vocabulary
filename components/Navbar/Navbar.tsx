@@ -4,8 +4,8 @@ import {useRouter} from "expo-router";
 
 import {ThemedView} from "@/components/ui/ThemedView/ThemedView";
 import CircleButton from "@/components/ui/CircleButton/CircleButton";
+import {IPropsNavbar} from "@/components/Navbar/types";
 import {ValidPath} from "@/types/types";
-import {IPropsNavbar} from './types';
 
 const Navbar: FC<IPropsNavbar> = ({customStyle}) => {
     const router = useRouter();
@@ -16,9 +16,9 @@ const Navbar: FC<IPropsNavbar> = ({customStyle}) => {
 
     return (
         <ThemedView style={[styles.container, customStyle]}>
-            <CircleButton iconName='category'/>
+            <CircleButton onPress={() => handleNavigation('/categories')} iconName='category'/>
             <CircleButton onPress={() => handleNavigation('/premium')} iconName='workspacepremium'/>
-            <CircleButton iconName='house.fill'/>
+            <CircleButton onPress={() => handleNavigation('/profile')} iconName='house.fill'/>
         </ThemedView>
     )
 }

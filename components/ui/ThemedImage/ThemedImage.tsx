@@ -1,7 +1,8 @@
 import {FC} from 'react';
 import { Image } from 'react-native';
 
-import {IPropsImage} from './types';
+import {IPropsImage} from "@/components/ui/ThemedImage/types";
+
 
 const ThemedImage: FC<IPropsImage> = ({...props}) => {
     return (

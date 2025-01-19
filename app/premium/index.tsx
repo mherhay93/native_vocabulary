@@ -1,9 +1,9 @@
 import Premium from "@/screens/Premium/Premium";
 
-const PremiumPage = () => {
+const PremiumScreen = () => {
     return (
       <Premium />
     )
 }
 
-export default PremiumPage;
+export default PremiumScreen;

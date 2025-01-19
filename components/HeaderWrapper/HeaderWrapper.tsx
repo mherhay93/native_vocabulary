@@ -4,8 +4,8 @@ import {useRouter} from "expo-router";
 
 import {IconSymbol} from "@/components/ui/IconSymbol/IconSymbol";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
+import {IPropsHeaderWrapper} from "@/components/HeaderWrapper/types";
 import {Colors} from "@/constants/Colors";
-import {IPropsHeaderWrapper} from './types';
 
 const HeaderWrapper: FC<IPropsHeaderWrapper> = ({hideCloseButton, showSearch, btnText, title}) => {
     const router = useRouter();

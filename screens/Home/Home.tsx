@@ -1,28 +1,33 @@
-import {FC} from 'react';
+import {FC, useEffect, useState} from 'react';
 import {useSelector} from "react-redux";
 import {ImageSourcePropType, StyleSheet} from 'react-native';
 
 import {ThemedView} from "@/components/ui/ThemedView/ThemedView";
-import HomeSlider from "@/components/HomeSlider/HomeSlider";
+import HomeSlider from "@/screens/Home/HomeSlider/HomeSlider";
 import ThemedImage from "@/components/ui/ThemedImage/ThemedImage";
+import {useGetDataStorage} from "@/hooks/useGetDataStorage";
 import {selectUserData} from "@/redux/user/selectors";
 import Navbar from "@/components/Navbar/Navbar";
-import {IPropsHome} from "@/screens/Home/types";
 import {pageBG, wordData} from "@/tempDB/db";
 import {pageBGTypes} from "@/tempDB/types";
 
-const Home: FC<IPropsHome> = () => {
+const Home: FC = () => {
     const {topic, background} = useSelector(selectUserData);
-
+    const storageBackground = useGetDataStorage('background');
+    const [backImg, setBgImg] = useState(background)
     const data = wordData[topic]
-    const isDefault = pageBGTypes.default === background
+    const isDefault = pageBGTypes.default === backImg
     const bg = isDefault ? {backgroundColor: '#FDF5E6'} : {}
+
+    useEffect(() => {
+        setBgImg( storageBackground || background)
+    }, [storageBackground]);
 
     return (
         <ThemedView style={{...styles.container, ...bg}}>
             {!isDefault && (
                 <ThemedImage
-                    source={pageBG[background] as ImageSourcePropType}
+                    source={pageBG[backImg] as ImageSourcePropType}
                     style={styles.image}
                 />
             )}

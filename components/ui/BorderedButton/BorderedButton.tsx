@@ -1,9 +1,9 @@
 import {FC} from 'react';
 import {StyleSheet, TouchableOpacity} from "react-native";
 
+import {IPropsBorderedButton} from "@/components/ui/BorderedButton/types";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {Colors} from "@/constants/Colors";
-import {IPropsBorderedButton} from './types';
 
 const BorderedButton: FC<IPropsBorderedButton> = ({title, customStyle, ...props}) => {
 

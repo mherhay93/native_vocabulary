@@ -8,10 +8,11 @@ import {
     TouchableOpacity
 } from "react-native";
 
-import { pageBG } from "@/tempDB/db";
-import {pageBGTypes} from "@/tempDB/types";
 import {IconSymbol} from "@/components/ui/IconSymbol/IconSymbol";
-import { IPropsSelectBG } from './types';
+import {IPropsSelectBG} from "@/components/Onboarding/SelectBG/types";
+import {saveDataStorage} from "@/helpers/storageHelpers";
+import {pageBGTypes} from "@/tempDB/types";
+import { pageBG } from "@/tempDB/db";
 
 const SelectBG: FC<IPropsSelectBG> = ({handelChange}) => {
     const [select, setSelect] = useState<string>(pageBGTypes.default)
@@ -19,7 +20,7 @@ const SelectBG: FC<IPropsSelectBG> = ({handelChange}) => {
 
     const handleSelect = (item: string) => {
         setSelect(item)
-
+        saveDataStorage('background', JSON.stringify(item))
         if (handelChange) {
             handelChange(item)
         }

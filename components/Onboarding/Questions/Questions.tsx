@@ -1,8 +1,8 @@
 import {FC} from 'react';
 import {FlatList, StyleSheet, View} from "react-native";
 
+import {IPropsQuestions} from "@/components/Onboarding/Questions/types";
 import InputButton from "@/components/ui/InputButton/InputButton";
-import {IPropsQuestions} from './types';
 
 const Questions: FC<IPropsQuestions> = ({data, handelSelect}) => {
 

@@ -1,9 +1,9 @@
 import {FC} from 'react';
 import {TextInput, StyleSheet} from "react-native";
 
+import {IPropsThemedInput} from "@/components/ui/ThemedInput/types";
 import {useThemeColor} from "@/hooks/useThemeColor";
 import {Colors} from "@/constants/Colors";
-import {IPropsThemedInput} from './types';
 
 const ThemedInput: FC<IPropsThemedInput> = ({ style, lightColor, darkColor, ...otherProps }) => {
     const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');

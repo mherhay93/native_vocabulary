@@ -1,1 +1,1 @@
-export type ValidPath = "/premium" | "/" | `/?${string}` | `/#${string}`;
+export type ValidPath = "/premium" |  "/profile" | "/categories" | "/" | `/?${string}` | `/#${string}`;

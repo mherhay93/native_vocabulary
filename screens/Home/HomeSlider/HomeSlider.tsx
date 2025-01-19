@@ -8,7 +8,7 @@ import {
 } from 'react-native-gesture-handler';
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from 'react-native-reanimated';
 
-import {IPropsHomeSlider} from "@/components/HomeSlider/types";
+import {IPropsHomeSlider} from "@/screens/Home/HomeSlider/types";
 import {ThemedView} from "@/components/ui/ThemedView/ThemedView";
 import {Colors} from "@/constants/Colors";
 

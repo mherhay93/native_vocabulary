@@ -1,9 +1,9 @@
 import {FC} from 'react';
 import {StyleSheet, TouchableOpacity, View} from "react-native";
 
+import {IPropsPremiumCard} from "@/screens/Premium/PremiumCard/types";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {Colors} from "@/constants/Colors";
-import {IPropsPremiumCard} from './types';
 
 const PremiumCard: FC<IPropsPremiumCard> = ({
                                                 title,

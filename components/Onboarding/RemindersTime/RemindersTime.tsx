@@ -5,13 +5,13 @@ import {useDispatch} from "react-redux";
 import {useRouter} from "expo-router";
 
 import TimeRange from "@/components/Onboarding/RemindersTime/TimeRange/TimeRange";
+import {IPropsRemindersTime} from "@/components/Onboarding/RemindersTime/types";
 import BorderedButton from "@/components/ui/BorderedButton/BorderedButton";
 import {Collapsible} from "@/components/ui/Collapsible/Collapsible";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {userReducers} from "@/redux/user/slice";
 import {pageKey} from "@/redux/user/types";
 import {Colors} from "@/constants/Colors";
-import {IPropsRemindersTime} from './types';
 
 const {
     setUI,

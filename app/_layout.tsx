@@ -63,6 +63,18 @@ export default function RootLayout() {
                 options={{
                     animation: "slide_from_bottom",
                     gestureDirection: "vertical",
+                }}/>
+              <Stack.Screen
+                  name="profile"
+                  options={{
+                      animation: "slide_from_bottom",
+                      gestureDirection: "vertical",
+            }}/>
+              <Stack.Screen
+                  name="categories"
+                  options={{
+                      animation: "slide_from_bottom",
+                      gestureDirection: "vertical",
             }}/>
             <Stack.Screen name="+not-found"/>
           </Stack>

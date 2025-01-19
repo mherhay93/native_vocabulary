@@ -1,9 +1,9 @@
 import {FC} from 'react';
 import {StyleSheet, TouchableOpacity} from "react-native";
 
+import {IPropsCircleButton} from "@/components/ui/CircleButton/types";
 import {IconSymbol} from "@/components/ui/IconSymbol/IconSymbol";
 import {Colors} from "@/constants/Colors";
-import {IPropsCircleButton} from './types';
 
 const CircleButton: FC<IPropsCircleButton> = ({iconName = '', ...props}) => {
     return (

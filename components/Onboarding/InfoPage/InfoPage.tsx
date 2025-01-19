@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import * as Notifications from "expo-notifications";
 
 import BorderedButton from "@/components/ui/BorderedButton/BorderedButton";
+import {IPropsInfoPage} from "@/components/Onboarding/InfoPage/types";
 import Questions from "@/components/Onboarding/Questions/Questions";
 import ThemedInput from "@/components/ui/ThemedInput/ThemedInput";
 import ThemedImage from "@/components/ui/ThemedImage/ThemedImage";
@@ -15,7 +16,6 @@ import {selectUserUI} from "@/redux/user/selectors";
 import {userReducers} from "@/redux/user/slice";
 import {pageKey} from "@/redux/user/types";
 import {Colors} from "@/constants/Colors";
-import {IPropsInfoPage} from './types';
 
 const {
     setUserData,
@@ -31,7 +31,7 @@ const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
     const handleNavigate = () => {
         if(pageData.endPage) {
             router.replace(`/premium`);
-            saveDataStorage('onboarded', 'true')
+            saveDataStorage('onboarded', 'true');
             return
         }
 

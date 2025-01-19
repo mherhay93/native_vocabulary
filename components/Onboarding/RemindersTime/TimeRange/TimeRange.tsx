@@ -1,9 +1,9 @@
 import {FC, useRef} from 'react';
 import {StyleSheet, View} from "react-native";
 
+import {IPropsTimeRange, timeRange} from "@/components/Onboarding/RemindersTime/TimeRange/types";
 import InputRange from "@/components/ui/InputRange/InputRange";
 import TimePicker from "@/components/ui/TimePicker/TimePicker";
-import {IPropsTimeRange, timeRange} from './types';
 
 const TimeRange: FC<IPropsTimeRange> = ({selectCount, selectTime}) => {
     const [startTime, endTime] = [useRef(new Date()), useRef(new Date())];

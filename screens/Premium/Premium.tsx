@@ -9,9 +9,8 @@ import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {IconSymbol} from "@/components/ui/IconSymbol/IconSymbol";
 import DarkWrapper from "@/components/DarkWrapper/DarkWrapper";
 import {Colors} from "@/constants/Colors";
-import {IPropsPremium} from './types';
 
-const Premium: FC<IPropsPremium> = () => {
+const Premium: FC = () => {
     const [selectedID, setSelectedId] = useState('1')
 
     const handleSelect = (id: string) => {

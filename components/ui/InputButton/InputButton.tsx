@@ -3,8 +3,8 @@ import {StyleSheet, TouchableOpacity} from "react-native";
 
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {IconSymbol} from "@/components/ui/IconSymbol/IconSymbol";
+import {IPropsInputButton} from "@/components/ui/InputButton/types";
 import {Colors} from "@/constants/Colors";
-import {IPropsInputButton} from './types';
 
 const InputButton: FC<IPropsInputButton> = ({title, handelSelect, ...props}) => {
     const [select, setSelect] = useState(false)

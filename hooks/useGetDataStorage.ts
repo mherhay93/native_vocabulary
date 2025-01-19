@@ -7,7 +7,7 @@ export const useGetDataStorage = (key: string) => {
     try {
         const jsonValue = AsyncStorage.getItem(key);
         if (jsonValue !== null) {
-            jsonValue.then(res => setResult(res))
+            jsonValue.then(res => res && setResult(JSON.parse(res)))
         } else {
             console.log('No data');
         }
