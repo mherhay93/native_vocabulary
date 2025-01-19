@@ -10,6 +10,9 @@ export const MAPPING = {
     'chevron.left.forwardslash.chevron.right': 'code',
     'chevron.right': 'chevron-right',
     'checkcircle': 'check-circle',
+    'close': 'close',
+    'category': 'category',
+    'workspacepremium': 'workspace-premium',
 } as Partial<
     Record<
         import('expo-symbols').SymbolViewProps['name'],

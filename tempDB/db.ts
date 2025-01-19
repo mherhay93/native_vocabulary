@@ -198,6 +198,7 @@ export const onboardingData: IOnboardingEntities = {
             'Business',
             'Other topic',
         ],
+        endPage: true
     },
     '100': {
         id: 100,

@@ -36,20 +36,24 @@ export default function RootLayout() {
               screenOptions={{
                   gestureEnabled: true,
                   gestureDirection: "horizontal",
+                  headerShown: false
               }}
           >
             <Stack.Screen
                 name="index"
                 options={{
                     animation: "slide_from_right",
-                    headerShown: false
                 }}
             />
             <Stack.Screen
                 name="onboarding/[page]"
                 options={{
                     animation: "slide_from_right",
-                    headerShown: false
+            }}/>
+              <Stack.Screen
+                name="premium"
+                options={{
+                    animation: "slide_from_right",
             }}/>
             <Stack.Screen name="+not-found"/>
           </Stack>

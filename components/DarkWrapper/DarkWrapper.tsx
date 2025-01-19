@@ -5,20 +5,20 @@ import {Colors} from "@/constants/Colors";
 import {useThemeColor} from "@/hooks/useThemeColor";
 import {IPropsOnboardingWrapper} from './types';
 
-const OnboardingWrapper: FC<IPropsOnboardingWrapper> = ({children}) => {
+const DarkWrapper: FC<IPropsOnboardingWrapper> = ({children, customStyle}) => {
     const backgroundColor = useThemeColor({
         light: Colors.light.onboardingBG,
         dark: Colors.light.onboardingBG
     }, 'background');
     return (
-        <SafeAreaView style={{...styles.container, backgroundColor}}>
+        <SafeAreaView style={[{...styles.container, backgroundColor}, customStyle]}>
             <StatusBar barStyle="light-content" backgroundColor="transparent" translucent/>
             {children}
         </SafeAreaView>
     )
 }
 
-export default OnboardingWrapper;
+export default DarkWrapper;
 
 const styles = StyleSheet.create({
     container: {

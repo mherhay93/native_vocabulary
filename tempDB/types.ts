@@ -15,6 +15,7 @@ export interface IOnboardingData {
     skip: boolean;
     pageKay: pageKey;
     questions: string[] | 'input' | null;
+    endPage?: boolean
 }
 
 export interface IWordData {

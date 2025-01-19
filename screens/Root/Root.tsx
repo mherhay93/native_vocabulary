@@ -1,14 +1,14 @@
 import {FC} from 'react';
 import {Redirect} from "expo-router";
 
-import {getDataStorage} from "@/helpers/storageHelpers";
+import {useGetDataStorage} from "@/hooks/useGetDataStorage";
 import Home from "@/screens/Home/Home";
 import {IPropsRoot} from './types';
 
 const Root: FC<IPropsRoot> = () => {
-    const onboarded = getDataStorage('onboarded')
+    const onboarded = useGetDataStorage('onboarded')
 
-    if (Boolean(onboarded)) {
+    if (onboarded === null) {
         return <Redirect href="/onboarding/1" />;
     }
 

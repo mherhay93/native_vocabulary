@@ -10,6 +10,7 @@ import ThemedInput from "@/components/ui/ThemedInput/ThemedInput";
 import ThemedImage from "@/components/ui/ThemedImage/ThemedImage";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import SelectBG from "@/components/Onboarding/SelectBG/SelectBG";
+import {saveDataStorage} from "@/helpers/storageHelpers";
 import {selectUserUI} from "@/redux/user/selectors";
 import {userReducers} from "@/redux/user/slice";
 import {pageKey} from "@/redux/user/types";
@@ -28,6 +29,12 @@ const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
     const showQuestions = pageData.questions && pageData.questions !== 'input' && pageData.pageKay !== pageKey.background;
 
     const handleNavigate = () => {
+        if(pageData.endPage) {
+            router.replace(`/premium`);
+            saveDataStorage('onboarded', 'true')
+            return
+        }
+
         router.push(`/onboarding/${Number(prevPage || page) + 1}`)
         if(prevPage) {
             dispatch(setUI({prevPage: ''}))

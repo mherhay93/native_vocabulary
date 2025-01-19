@@ -2,7 +2,7 @@ import {FC} from 'react';
 import {Redirect, useLocalSearchParams} from "expo-router";
 import {useSelector} from "react-redux";
 
-import OnboardingWrapper from "@/components/Onboarding/OnboardingWrapper/OnboardingWrapper";
+import DarkWrapper from "@/components/DarkWrapper/DarkWrapper";
 import RemindersTime from "@/components/Onboarding/RemindersTime/RemindersTime";
 import InfoPage from "@/components/Onboarding/InfoPage/InfoPage";
 import {selectUserData} from "@/redux/user/selectors";
@@ -32,9 +32,9 @@ const Onboarding: FC<IPropsOnboarding> = () => {
     }
 
     return (
-        <OnboardingWrapper>
+        <DarkWrapper>
             {renderPage()}
-        </OnboardingWrapper>
+        </DarkWrapper>
     )
 }
 
