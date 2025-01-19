@@ -10,6 +10,11 @@ export interface IUserData {
     userName: string,
     level: string,
     timeLearning: string,
+    background: string,
+    goal: string,
+    topic: string,
+    notificationCount: number,
+    remindersTime: string,
 }
 
 export interface IUI {
@@ -24,6 +29,7 @@ export enum pageKey {
     level = 'level',
     timeLearning = 'timeLearning',
     remindersTime = 'remindersTime',
+    notificationCount = 'notificationCount',
     background = 'background',
     goal = 'goal',
     topic = 'topic',

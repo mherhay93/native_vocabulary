@@ -1,14 +1,9 @@
-import {IOnboardingEntities, IWordData, wordTypes} from "@/tempDB/types";
+import {IOnboardingEntities, IPageBG, IWordData, pageBGTypes, wordTypes} from "@/tempDB/types";
 import alphabets from '../assets/images/alphabets.png'
 import goToGoal from '../assets/images/goToGoal.png'
 import learn from '../assets/images/learn.webp'
 import vocabularyLearn from '../assets/images/klipartz.webp'
 import notification from '../assets/images/notification.png'
-import bg1 from '../assets/images/abstract.webp'
-import bg2 from '../assets/images/pexels.webp'
-import bg3 from '../assets/images/pexels-enginakyurt-1493226.webp'
-import bg4 from '../assets/images/pexels-fwstudio-33348-129731.webp'
-import bg5 from '../assets/images/pexels-joaojesusdesign.webp'
 import {pageKey} from "@/redux/user/types";
 
 export const onboardingData: IOnboardingEntities = {
@@ -152,11 +147,11 @@ export const onboardingData: IOnboardingEntities = {
         skip: false,
         pageKay: pageKey.background,
         questions: [
-            bg1,
-            bg2,
-            bg3,
-            bg4,
-            bg5,
+            'bg1',
+            'bg2',
+            'bg3',
+            'bg4',
+            'bg5',
             'bg6',
         ],
     },
@@ -215,6 +210,16 @@ export const onboardingData: IOnboardingEntities = {
         pageKay: pageKey.notification,
         questions: null,
     },
+}
+
+
+export const pageBG: IPageBG = {
+    [pageBGTypes.BG1] : require('../assets/images/abstract.webp'),
+    [pageBGTypes.BG2] : require('../assets/images/pexels.webp'),
+    [pageBGTypes.BG3] : require('../assets/images/pexels-enginakyurt-1493226.webp'),
+    [pageBGTypes.BG4] : require('../assets/images/pexels-fwstudio-33348-129731.webp'),
+    [pageBGTypes.BG5] : require('../assets/images/pexels-joaojesusdesign.webp'),
+    [pageBGTypes.default] : 'default',
 }
 
 

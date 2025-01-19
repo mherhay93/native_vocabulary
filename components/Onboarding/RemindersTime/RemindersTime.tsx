@@ -1,22 +1,27 @@
 import {FC} from 'react';
-import {StyleSheet, View} from "react-native";
-import {useRouter} from "expo-router";
 import * as Notifications from 'expo-notifications';
+import {StyleSheet, View} from "react-native";
 import {useDispatch} from "react-redux";
+import {useRouter} from "expo-router";
 
 import TimeRange from "@/components/Onboarding/RemindersTime/TimeRange/TimeRange";
 import BorderedButton from "@/components/ui/BorderedButton/BorderedButton";
 import {Collapsible} from "@/components/ui/Collapsible/Collapsible";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
 import {userReducers} from "@/redux/user/slice";
+import {pageKey} from "@/redux/user/types";
 import {Colors} from "@/constants/Colors";
 import {IPropsRemindersTime} from './types';
 
-const { setUI } = userReducers
+const {
+    setUI,
+    setUserData
+} = userReducers
 
 const RemindersTime: FC<IPropsRemindersTime> = ({pageData, page}) => {
     const router = useRouter();
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+
     const handleNavigate = () => {
         router.push(`/onboarding/${Number(page) + 1}`)
     };
@@ -30,6 +35,17 @@ const RemindersTime: FC<IPropsRemindersTime> = ({pageData, page}) => {
             handleNavigate()
         }
     };
+
+    const handleSelectCount = (value: number) => {
+        const key = pageKey.notificationCount
+        dispatch(setUserData({[key] : value}));
+    }
+
+    const handleSelectTime = (value: string) => {
+        const key = pageData.pageKay
+        dispatch(setUserData({[key] : value}));
+    }
+
 
     return (
         <>
@@ -54,7 +70,10 @@ const RemindersTime: FC<IPropsRemindersTime> = ({pageData, page}) => {
                     Salibrious (adj.) - a place that is good to live in, clean and healthy.
                 </ThemedText>
             </Collapsible>
-            <TimeRange />
+            <TimeRange
+                selectCount={handleSelectCount}
+                selectTime={handleSelectTime}
+            />
             {pageData.methodTitle && (
                 <BorderedButton
                     customStyle={styles.button}

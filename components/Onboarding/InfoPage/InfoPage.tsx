@@ -2,14 +2,15 @@ import {FC} from 'react';
 import {useRouter} from "expo-router";
 import {StyleSheet, TouchableOpacity, View} from "react-native";
 import {useDispatch, useSelector} from "react-redux";
+import * as Notifications from "expo-notifications";
 
 import BorderedButton from "@/components/ui/BorderedButton/BorderedButton";
 import Questions from "@/components/Onboarding/Questions/Questions";
 import ThemedInput from "@/components/ui/ThemedInput/ThemedInput";
 import ThemedImage from "@/components/ui/ThemedImage/ThemedImage";
 import {ThemedText} from "@/components/ui/ThemedText/ThemedText";
+import SelectBG from "@/components/Onboarding/SelectBG/SelectBG";
 import {selectUserUI} from "@/redux/user/selectors";
-import * as Notifications from "expo-notifications";
 import {userReducers} from "@/redux/user/slice";
 import {pageKey} from "@/redux/user/types";
 import {Colors} from "@/constants/Colors";
@@ -23,7 +24,8 @@ const {
 const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
     const dispatch = useDispatch()
     const router = useRouter();
-    const { prevPage } = useSelector(selectUserUI)
+    const {prevPage} = useSelector(selectUserUI);
+    const showQuestions = pageData.questions && pageData.questions !== 'input' && pageData.pageKay !== pageKey.background;
 
     const handleNavigate = () => {
         router.push(`/onboarding/${Number(prevPage || page) + 1}`)
@@ -75,18 +77,27 @@ const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
                     {pageData.description}
                 </ThemedText>
             </View>
-            {pageData.questions && pageData.questions !== 'input' && (
+            {showQuestions && (
                 <View style={styles.questions}>
                     <Questions
                         handelSelect={handelSelect}
-                        data={pageData.questions}
+                        data={pageData.questions as string[]}
                     />
                 </View>
             )}
             {pageData.questions === 'input' && (
                 <View style={styles.input}>
-                    <ThemedInput placeholder='Your name' onChangeText={handelChange}/>
+                    <ThemedInput
+                        placeholder='Your name'
+                        onChangeText={handelChange}
+                        placeholderTextColor={Colors.dark.borderBG}
+                    />
                 </View>
+            )}
+            {pageData.pageKay === pageKey.background && (
+                    <SelectBG
+                        handelChange={handelChange}
+                    />
             )}
             {pageData.methodTitle && (
                 <BorderedButton

@@ -8,14 +8,15 @@ import {IPropsTimePicker} from "@/components/ui/TimePicker/types";
 import {generateTime} from "@/components/ui/TimePicker/utils";
 import {Colors} from "@/constants/Colors";
 
-const TimePicker:FC<IPropsTimePicker> = ({label, customStyle = {}}) => {
+const TimePicker:FC<IPropsTimePicker> = ({label, customStyle, handleTime }) => {
     const [date, setDate] = useState(new Date());
     const [show, setShow] = useState(false);
 
-    const onChange = (event: any, selectedDate?: Date) => {
+    const onChange = (_: unknown, selectedDate?: Date) => {
         const currentDate = selectedDate || date;
         setShow(false);
         setDate(currentDate);
+        handleTime(currentDate)
     };
 
     const showTimePicker = () => {

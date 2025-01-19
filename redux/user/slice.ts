@@ -1,5 +1,6 @@
 import {createSlice, Draft, PayloadAction} from "@reduxjs/toolkit";
 import {IInitialState, IUI, IUserData} from "@/redux/user/types";
+import {pageBGTypes} from "@/tempDB/types";
 
 const initialState: IInitialState = {
     userData: {
@@ -9,6 +10,11 @@ const initialState: IInitialState = {
         userName: '',
         level: '',
         timeLearning: '',
+        background: pageBGTypes.default,
+        goal: '',
+        topic: '',
+        notificationCount: 10,
+        remindersTime: '',
     },
     UI: {
         prevPage: ''

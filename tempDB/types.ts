@@ -29,6 +29,10 @@ export interface IWordInfo {
     id: number
 }
 
+export interface IPageBG {
+    [key: string]: string;
+}
+
 export enum wordTypes {
     SOCIETY = 'SOCIETY',
     FOREIGN_LANG = 'FOREIGN_LANG',
@@ -36,4 +40,13 @@ export enum wordTypes {
     EMOTIONS = 'EMOTIONS',
     BUSINESS = 'BUSINESS',
     OTHER = 'OTHER'
+}
+
+export enum pageBGTypes {
+    'BG1' = 'BG1',
+    'BG2' = 'BG2',
+    'BG3' = 'BG3',
+    'BG4' = 'BG4',
+    'BG5' = 'BG5',
+    'default' = 'default',
 }
