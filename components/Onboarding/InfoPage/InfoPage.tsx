@@ -42,6 +42,8 @@ const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
         }
     };
 
+    const handleNavigationWithoutReq = () => router.push(`/onboarding/${Number(prevPage || page) + 1}`)
+
     const handelSelect = (value: string) => {
         const key = pageData.pageKay
         handleNavigate();
@@ -116,7 +118,7 @@ const InfoPage: FC<IPropsInfoPage> = ({pageData, page,}) => {
             {pageData.pageKay === pageKey.notification && (
                 <TouchableOpacity
                     style={styles.textButton}
-                    onPress={handleNavigate}
+                    onPress={handleNavigationWithoutReq}
                 >
                     <ThemedText>I'm not ready yet</ThemedText>
                 </TouchableOpacity>

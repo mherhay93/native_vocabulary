@@ -191,12 +191,12 @@ export const onboardingData: IOnboardingEntities = {
         skip: false,
         pageKay: pageKey.topic,
         questions: [
-            'Society',
-            'Words in foreign languages',
-            'Human body',
-            'Emotions',
-            'Business',
-            'Other topic',
+            wordTypes.SOCIETY,
+            wordTypes.FOREIGN_LANG,
+            wordTypes.HUMAN_BODY,
+            wordTypes.EMOTIONS,
+            wordTypes.BUSINESS,
+            wordTypes.OTHER,
         ],
         endPage: true
     },

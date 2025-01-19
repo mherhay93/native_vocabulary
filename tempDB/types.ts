@@ -35,12 +35,12 @@ export interface IPageBG {
 }
 
 export enum wordTypes {
-    SOCIETY = 'SOCIETY',
-    FOREIGN_LANG = 'FOREIGN_LANG',
-    HUMAN_BODY = 'HUMAN_BODY',
-    EMOTIONS = 'EMOTIONS',
-    BUSINESS = 'BUSINESS',
-    OTHER = 'OTHER'
+    SOCIETY = 'Society',
+    FOREIGN_LANG = 'Words in foreign languages',
+    HUMAN_BODY = 'Human body',
+    EMOTIONS = 'Emotions',
+    BUSINESS = 'Business',
+    OTHER = 'Other topic'
 }
 
 export enum pageBGTypes {

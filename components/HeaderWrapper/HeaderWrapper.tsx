@@ -11,7 +11,7 @@ const HeaderWrapper: FC<IPropsHeaderWrapper> = ({hideCloseButton, showSearch, bt
     const router = useRouter();
 
     const handleClose = () => {
-        router.back();
+        router.push('/home');
     }
 
     return (
