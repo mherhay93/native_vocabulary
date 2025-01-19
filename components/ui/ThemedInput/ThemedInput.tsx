@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     input: {
         borderRadius: 8,
         backgroundColor: Colors.dark.inputBG,
-        color: Colors.dark.text
+        color: Colors.dark.text,
+        minHeight: 40
     }
 })
